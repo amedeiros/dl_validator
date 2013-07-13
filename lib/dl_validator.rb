@@ -1,5 +1,5 @@
 require "dl_validator/version"
-require "conifg/config"
+require "config/config"
 
 module DlValidator
 
