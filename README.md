@@ -1,6 +1,6 @@
 # DlValidator
 
-TODO: Write a gem description
+DlValidator is a small gem that performs soft checks against a drivers license number and state. This is used only to flag a drivers license as being invalid, and is not intended to be considered true denial on a drivers license number.
 
 ## Installation
 
