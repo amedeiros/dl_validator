@@ -1,8 +1,8 @@
-require "dl_validator/version"
-require "config/config"
+require 'dl_validator/version'
+require 'config/config'
+require '../lib/extensions/active_model' if defined?(Rails)
 
 module DlValidator
-
   def self.invalid?(dl_number, dl_state)
     # Downcase and remove non-word characters
     dl_number = dl_number.to_s.upcase.gsub(/(\W|_)*/, '')

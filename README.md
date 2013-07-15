@@ -18,7 +18,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+With a drivers license number and drivers license state
+
+```ruby
+DlValidator.invalid?('F123456789012', 'FL') => false
+DlValidator.invalid?('F7834', 'FL') => true
+```
+
+Inside your rails model. Dependent on fields :drivers_license_number and :drivers_license_state
+```ruby
+class DriversLicense < ActiveRecord::Base
+  attr_accessible :drivers_license_number, :drivers_license_state
+  validates :drivers_license_number, :drivers_license_state, :drivers_license_invalid => true
+end
+```
+
 
 ## Contributing
 
