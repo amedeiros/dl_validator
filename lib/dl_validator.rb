@@ -1,6 +1,6 @@
 require 'dl_validator/version'
 require 'config/config'
-require '../lib/extensions/active_model' if defined?(Rails)
+require  File.expand_path(File.dirname(__FILE__) + '/extensions/drivers_license_invalid_validator') if defined?(Rails)
 
 module DlValidator
   def self.invalid?(dl_number, dl_state)
