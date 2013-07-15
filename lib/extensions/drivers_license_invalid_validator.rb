@@ -1,4 +1,4 @@
-class DriversLicenseInvalidValidator
+class DriversLicenseInvalidValidator < ActiveModel::Validator
   def validate(record)
     if !@options[:attributes].include?(:drivers_license_number)
       record.errors.add(:base, 'Missing required attribute drivers_license_number')
@@ -14,3 +14,4 @@ class DriversLicenseInvalidValidator
     end
   end
 end
+
