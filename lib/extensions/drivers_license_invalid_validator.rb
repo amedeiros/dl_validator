@@ -1,5 +1,5 @@
-class DriversLicenseInvalidValidator < ActiveModel::EachValidator
-  def validate_each(record, attribute, value)
+class DriversLicenseInvalidValidator < ActiveModel::Validator
+  def validate(record)
     if record.drivers_license_number.nil?
       record.errors.add(:base, 'Missing attribute drivers_license_number')
     elsif record.drivers_license_state.nil?
