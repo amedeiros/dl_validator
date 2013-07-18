@@ -9,7 +9,7 @@ module DlValidator
     dl_state  = dl_state.to_s.upcase.gsub(/(\W|\d|_)*/, '')
 
     # Stop here and return true if the state does not exist
-    return true, "Undefined state: #{dl_state}" if !Config::STATES.include?(dl_state) and !Config::STATES.values.include?(dl_state)
+    return true if !Config::STATES.include?(dl_state) and !Config::STATES.values.include?(dl_state)
 
     # Find the state abbreviation key we need to access our regex hash.
     key = get_abbreviation_key(dl_state)

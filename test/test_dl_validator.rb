@@ -21,15 +21,13 @@ class DlValidatorTest < Test::Unit::TestCase
       end
 
       should 'return true for an undefined state abbreviation' do
-        invalid, error = DlValidator.invalid?('123', 'QQ')
+        invalid = DlValidator.invalid?('123', 'QQ')
         assert invalid
-        assert_equal 'Undefined state: QQ', error
       end
 
       should 'return true for an undefined full state name' do
-        invalid, error = DlValidator.invalid?('123', 'BadState')
+        invalid = DlValidator.invalid?('123', 'BadState')
         assert invalid
-        assert_equal 'Undefined state: BADSTATE', error
       end
 
       should 'handle a state abbreviation with non-word characters' do
