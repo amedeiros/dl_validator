@@ -4,6 +4,9 @@ require  'extensions/drivers_license_invalid_validator' if defined?(Rails)
 
 module DlValidator
   def self.invalid?(dl_number, dl_state)
+    # Stop and return true if either dl_number or dl_state are nil
+    return true if dl_number.nil? or dl_state.nil?
+
     # Downcase and remove non-word characters
     dl_number = dl_number.to_s.upcase.gsub(/(\W|_)*/, '')
     dl_state  = dl_state.to_s.upcase.gsub(/(\W|\d|_)*/, '')

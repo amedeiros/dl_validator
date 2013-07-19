@@ -44,6 +44,14 @@ class DlValidatorTest < Test::Unit::TestCase
         license = 'F / @!!()_-=123  45%$#67  898?.,;76' # F123456789876
         assert !DlValidator.invalid?(license, 'FL')
       end
+
+      should 'return true for a nil drivers_license_number' do
+        assert DlValidator.invalid?(drivers_license_number=nil, 'FL')
+      end
+
+      should 'return true for a nil drivers_license_state' do
+        assert DlValidator.invalid?('123456', drivers_license_state=nil)
+      end
     end
 
     context '#get_abbreviation_key' do
