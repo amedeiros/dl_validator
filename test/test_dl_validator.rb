@@ -55,7 +55,7 @@ class DlValidatorTest < Test::Unit::TestCase
     end
 
     context '#get_abbreviation_key' do
-      DlValidator::Config::STATES.each do |state_abbreviation, state_name|
+      DlValidator::DlConfig::STATES.each do |state_abbreviation, state_name|
         should "return the correct state abbreviation #{state_abbreviation}" do
           assert_equal state_abbreviation, DlValidator.get_abbreviation_key(state_name)
         end

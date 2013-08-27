@@ -1,5 +1,5 @@
 module DlValidator
-  class Config
+  class DlConfig
     # Constant frozen hash of states and abbreviations
     STATES = {
         'AL' =>	'ALABAMA',
