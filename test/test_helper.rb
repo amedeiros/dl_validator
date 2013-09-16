@@ -39,7 +39,7 @@ class Helper
       'NY' => ['123456789'],                                                       # Format: 9 Numeric
       'NM' => ['123456789'],                                                       # Format: 9 Numeric
       'NC' => ['123456', '1234567', '12345678', '123456789', '123456789012'],      # Format: Up to 12 numeric
-      'ND' => ['123456789'],                                                       # Format: 9 Numeric
+      'ND' => ['123456789', 'KLK123TYP'],                                                       # Format: 9 Numeric
       'OH' => ['LK123456'],                                                        # Format: 2 Alpha 6 Numeric
       'OK' => ['O123456789'],                                                      # Format: 1 Alpha 9 Numeric
       'OR' => ['12345', '123456', '1234567'],                                      # Format: Up to 7 numeric

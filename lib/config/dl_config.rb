@@ -92,7 +92,7 @@ module DlValidator
         'NY' => /^([0-9]{9})$/,                                # Format: 9 Numeric
         'NM' => /^([0-9]{9})$/,                                # Format: 9 Numeric
         'NC' => /^([0-9]{1,12})$/,                             # Format: Up to 12 Numeric
-        'ND' => /^([0-9]{9})$/,                                # Format: 9 Numeric
+        'ND' => /^([A-Z0-9]{9})$/,                             # Format: 9 Alphanumeric
         'OH' => /^([A-Z]{2}[0-9]{6})$/,                        # Format: 2 Alpha 6 Numeric
         'OK' => /^([A-Z][0-9]{9})$/,                           # Format: 1 Alpha 9 Numeric
         'OR' => /^([0-9]{1,7})$/,                              # Format: Up to 7 Numeric
