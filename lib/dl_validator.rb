@@ -35,4 +35,9 @@ module DlValidator
     end
     key
   end
+
+  # Inverse of invalid?
+  def self.valid?(dl_number, dl_state)
+    !invalid?(dl_number, dl_state)
+  end
 end

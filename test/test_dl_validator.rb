@@ -2,20 +2,20 @@ require File.expand_path(File.dirname(__FILE__) + '/test_helper')
 
 class DlValidatorTest < Test::Unit::TestCase
   context DlValidator do
-    context '#invalid?' do
+    context '.invalid?' do
 
-      Helper::VALID_DRIVERS_LICENSES.each do |key, licenses_array|
+      Helper::VALID_DRIVERS_LICENSES.each do |state, licenses_array|
         licenses_array.each_with_index do |license, index|
-          should "be a valid drivers license #{license} - #{key} index: #{index}" do
-            assert !DlValidator.invalid?(license, key), key.inspect + ' ' + license.inspect
+          should "be a valid drivers license #{license} - #{state} index: #{index}" do
+            assert !DlValidator.invalid?(license, state), state.inspect + ' ' + license.inspect
           end
         end
       end
 
-      Helper::VALID_DRIVERS_LICENSES.each do |key, licenses_array|
+      Helper::VALID_DRIVERS_LICENSES.each do |state, licenses_array|
         licenses_array.each_with_index do |license, index|
-          should "not be a valid drivers license #{license} - #{key} index: #{index}" do
-            assert DlValidator.invalid?(license + '123ABC', key), key.inspect + ' ' + license + '123ABC'
+          should "not be a valid drivers license #{license} - #{state} index: #{index}" do
+            assert DlValidator.invalid?(license + '123ABC', state), state.inspect + ' ' + license + '123ABC'
           end
         end
       end
@@ -54,10 +54,28 @@ class DlValidatorTest < Test::Unit::TestCase
       end
     end
 
-    context '#get_abbreviation_key' do
+    context '.get_abbreviation_key' do
       DlValidator::DlConfig::STATES.each do |state_abbreviation, state_name|
         should "return the correct state abbreviation #{state_abbreviation}" do
           assert_equal state_abbreviation, DlValidator.get_abbreviation_key(state_name)
+        end
+      end
+    end
+
+    context '.valid' do
+      Helper::VALID_DRIVERS_LICENSES.each do |state, licenses_array|
+        licenses_array.each_with_index do |license, index|
+          should "be a valid drivers license #{license} - #{state} index: #{index}" do
+            assert DlValidator.valid?(license, state), state.inspect + ' ' + license.inspect
+          end
+        end
+      end
+
+      Helper::VALID_DRIVERS_LICENSES.each do |state, licenses_array|
+        licenses_array.each_with_index do |license, index|
+          should "not be a valid drivers license #{license} - #{state} index: #{index}" do
+            refute DlValidator.valid?(license + '123ABC', state), state.inspect + ' ' + license + '123ABC'
+          end
         end
       end
     end
