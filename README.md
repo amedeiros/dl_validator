@@ -47,6 +47,10 @@ end
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+## Author
+
+Andrew Medeiros, amedeiros0920@gmail.com, @_AndrewMedeiros
+
 ## Future
 
 Update active model validation to be more flexible with field names.
