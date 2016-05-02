@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/amedeiros/area_code_validator.svg)](https://travis-ci.org/amedeiros/dl_validator)
+
 # DlValidator
 
 DlValidator is a small gem that performs soft checks against a drivers license number and state. This is used only to flag a drivers license as being invalid, and is not intended to be considered true denial on a drivers license number.
@@ -49,7 +51,10 @@ end
 
 ## Author
 
-Andrew Medeiros, amedeiros0920@gmail.com, @_AndrewMedeiros
+Andrew Medeiros, andrew@amedeiros.com, @_AndrewMedeiros
+
+## Contributors
+[crstamps2](https://github.com/crstamps2)
 
 ## Future
 

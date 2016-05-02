@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dl_validator (0.0.5)
+    dl_validator (0.0.6)
 
 GEM
   remote: https://rubygems.org/
@@ -41,4 +41,4 @@ DEPENDENCIES
   test-unit
 
 BUNDLED WITH
-   1.11.2
+   1.12.1
