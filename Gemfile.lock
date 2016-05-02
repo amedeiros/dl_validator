@@ -16,6 +16,7 @@ GEM
     i18n (0.6.4)
     minitest (4.3.2)
     multi_json (1.7.7)
+    power_assert (0.2.7)
     rake (10.0.4)
     shoulda (3.5.0)
       shoulda-context (~> 1.0, >= 1.0.1)
@@ -23,6 +24,8 @@ GEM
     shoulda-context (1.1.4)
     shoulda-matchers (2.2.0)
       activesupport (>= 3.0.0)
+    test-unit (3.1.8)
+      power_assert
     thread_safe (0.1.0)
       atomic
     tzinfo (0.3.37)
@@ -35,3 +38,7 @@ DEPENDENCIES
   dl_validator!
   rake
   shoulda
+  test-unit
+
+BUNDLED WITH
+   1.11.2
