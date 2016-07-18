@@ -45,8 +45,13 @@ class DlValidatorTest < Test::Unit::TestCase
         assert !DlValidator.invalid?(license, 'FL')
       end
 
-      should 'handle the state of Washington with an (*) in the License' do
-        license = 'F / @!!()_-=123  45*67  89'
+      should 'handle the state of Washington with an (*) in the License and should be valid' do
+        license = 'DEOLID*237NS'
+        assert DlValidator.valid?(license, 'WA')
+      end
+
+      should 'handle the state of Washington with an (*) in the License and should be invalid' do
+        license = 'DEOLID*23dsdf7NS'
         assert !DlValidator.valid?(license, 'WA')
       end
 
