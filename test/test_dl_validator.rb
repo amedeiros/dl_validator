@@ -45,6 +45,16 @@ class DlValidatorTest < Test::Unit::TestCase
         assert !DlValidator.invalid?(license, 'FL')
       end
 
+      should 'handle the state of Washington with an (*) in the License and should be valid' do
+        license = 'DEOLID*237NS'
+        assert DlValidator.valid?(license, 'WA')
+      end
+
+      should 'handle the state of Washington with an (*) in the License and should be invalid' do
+        license = 'DEOLID*23dsdf7NS'
+        assert !DlValidator.valid?(license, 'WA')
+      end
+
       should 'return true for a nil drivers_license_number' do
         assert DlValidator.invalid?(drivers_license_number=nil, 'FL')
       end

@@ -7,8 +7,8 @@ module DlValidator
     # Stop and return true if either dl_number or dl_state are nil
     return true if dl_number.nil? or dl_state.nil?
 
-    # Downcase and remove non-word characters
-    dl_number = dl_number.to_s.upcase.gsub(/(\W|_)*/, '')
+    # Downcase and remove non-word characters that are not asterisks
+    dl_number = dl_number.to_s.upcase.gsub(/[^a-zA-Z0-9\*]*/, '')
     dl_state  = dl_state.to_s.upcase.gsub(/(\W|\d|_)*/, '')
 
     # Stop here and return true if the state does not exist
