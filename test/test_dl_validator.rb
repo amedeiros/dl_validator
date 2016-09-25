@@ -62,6 +62,17 @@ class DlValidatorTest < Test::Unit::TestCase
       should 'return true for a nil drivers_license_state' do
         assert DlValidator.invalid?('123456', drivers_license_state=nil)
       end
+
+      should 'return valid for Kentucky' do
+        license = 'k12345678'
+        assert DlValidator.valid?(license, 'KY')
+      end
+
+      should 'return invalid for Kentucky' do
+        license = 'ka12345678'
+        assert !DlValidator.valid?(license, 'KY')
+      end
+
     end
 
     context '.get_abbreviation_key' do

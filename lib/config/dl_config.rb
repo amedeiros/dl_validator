@@ -75,7 +75,7 @@ module DlValidator
         'IN' => /(^[A-Z]{1}[0-9]{9}$)|(^[0-9]{9,10}$)/,                                                                     # Format: 1Alpha+9Numeric or 9Numeric or 10Numeric
         'IA' => /(^[0-9]{9}$)|(^[0-9]{3}[A-Z]{2}[0-9]{4})$/,                                                                    # Format: 9Numeric or 3Numeric+2Alpha+4Numeric
         'KS' => /(^([A-Z]{1}[0-9]{1}){2}[A-Z]{1}$)|(^[A-Z]{1}[0-9]{8}$)|(^[0-9]{9}$)/,                                      # Format: 1Alpha+1Numeric+1Alpha+1Numeric+1Alpha or 1Alpha+8Numeric or 9Numeric
-        'KY' => /(^[A_Z]{1}[0-9]{8,9}$)|(^[0-9]{9}$)/,                                                                      # Format: 1Alpha+8Numeric or 1Alpha+9Numeric or 9Numeric
+        'KY' => /(^[A-Z]{1}[0-9]{8,9}$)|(^[0-9]{9}$)/,                                                                      # Format: 1Alpha+8Numeric or 1Alpha+9Numeric or 9Numeric
         'LA' => /^[0-9]{1,9}$/,                                                                                             # Format: 1-9Numeric
         'ME' => /(^[0-9]{7,8}$)|(^[0-9]{7}[A-Z]{1}$)/,                                                                      # Format: 7Numeric or 7Numeric+1Alpha or 8Numeric
         'MD' => /^[A-Z]{1}[0-9]{12}$/,                                                                                      # Format: 1Alpha+12Numeric
