@@ -55,6 +55,7 @@ Andrew Medeiros, andrew@amedeiros.com, @_AndrewMedeiros
 
 ## Contributors
 [crstamps2](https://github.com/crstamps2)
+[mrryanjohnston](https://github.com/mrryanjohnston)
 
 ## Future
 
