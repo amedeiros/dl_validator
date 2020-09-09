@@ -25,15 +25,11 @@ module DlValidator
   # This is moved out into a method to make unit testing easier.
   def self.get_abbreviation_key(dl_state)
     # If the dl_state is greater than 2 then it is a full state name and we need to find the corresponding abbreviation for that state.
-    key = ''
     if dl_state.length > 2
-      DlConfig::STATES.each do |k, v|
-        key = k if v == dl_state
-      end
+      DlConfig::STATES.key(dl_state)
     else
-      key = dl_state # The dl_state is already an abbreviated state
+      dl_state # The dl_state is already an abbreviated state
     end
-    key
   end
 
   # Inverse of invalid?

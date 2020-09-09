@@ -5,9 +5,9 @@ require 'shoulda'
 class Helper
 
   VALID_DRIVERS_LICENSES = {
-      'AL' =>	['1234567'],                                                                                   # Format: 1-7Numeric
+      'AL' =>	['12345678'],                                                                                # Format: 1-8Numeric
       'AK' => ['1234567'],                                                                                   # Format: 1-7Numeric
-      'AZ' => ['A12345678', 'AA12345', '123456789'],                                                         # Format: 1Alpha+1-8Numeric or 2Alpha+2-5Numeric or 9Numeric
+      'AZ' => ['A12345678', '123456789'],                                                                    # Format: 1Alpha + 8Numeric or 9Numeric
       'AR' => ['1234', '123456789'],                                                                         # Format: 4-9Numeric
       'CA' => ['c1234567'],                                                                                  # Format: 1Alpha+7Numeric
       'CO' => ['123456789', 'A123', 'A123456', 'AA12', 'AA12345'],                                           # Format: 9Numeric or 1Alpha+3-6Numeric or 2Alpha+2-5Numeric
@@ -32,7 +32,7 @@ class Helper
       'MS' => ['123456789'],                                                                                 # Format: 9Numeric
       'MO' => ['M12345', 'A123456789', 'M123456R' , '12345678AB', '123456789A', '123456789'],                # Format: 1Alpha+5-9Numeric or 1Alpha+6Numeric+R or 8Numeric+2Alpha or 9Numeric+1Alpha or 9Numeric
       'MT' => ['J12345678', '1234567890123', '123456789', '12345678901234'],                                 # Format: 1Alpha+8Numeric or 13Numeric or 9Numeric or 14Numeric
-      'NE' => ['1234567'],                                                                                   # Format: 1-7Numeric
+      'NE' => ['A123456', 'A1234567', 'A12345678'],                                                          # Format: 1Alpha+6-8Numeric
       'NV' => ['123456789', '1234567890', '123456789012', 'X12345678'],                                      # Format: 9Numeric or 10Numeric or 12Numeric or X+8Numeric
       'NH' => ['12ADF12345'],                                                                                # Format: 2Numeric+3Alpha+5Numeric
       'NJ' => ['F12345678901234'],                                                                           # Format: 1Alpha+14Numeric
@@ -51,7 +51,7 @@ class Helper
       'TX' => ['1234567', '12345678'],                                                                       # Format: 7-8Numeric
       'UT' => ['1234', '1234567890'],                                                                        # Format: 4-10Numeric
       'VT' => ['12345678', '1234567A'],                                                                      # Format: 8Numeric or 7Numeric+A
-      'VA' => ['K123456789', 'A1234567890', 'A12345678901', '123456789'],                                    # Format: 1Alpha+9Numeric or 1Alpha+10Numeric or 1Alpha+11Numeric or 9Numeric
+      'VA' => ['A12345678', 'K123456789', 'A1234567890', 'A12345678901', '123456789'],                       # Format: 1Alpha+8-to-11Numeric or 9Numeric
       'WA' => ['A12345678901', 'ABCDEFG12345'],                                                              # Format: 1-7Alpha+any combination of Alpha, Numeric, or * for a total of 12 characters
       'WV' => ['1234567', 'E123456', 'AB123456'],                                                            # Format: 7Numeric or 1-2Alpha+5-6Numeric
       'WI' => ['W1234567890123'],                                                                            # Format: 1Alpha+13Numeric
