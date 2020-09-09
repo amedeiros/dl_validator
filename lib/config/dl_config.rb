@@ -73,7 +73,7 @@ module DlValidator
         'ID' => /(^[A-Z]{2}[0-9]{6}[A-Z]{1}$)|(^[0-9]{9}$)/,                                                                # Format: 2Alpha+6Numeric+1Alpha or 9Numeric
         'IL' => /^[A-Z]{1}[0-9]{11,12}$/,                                                                                   # Format: 1Alpha+11Numeric or 1Alpha+12Numeric
         'IN' => /(^[A-Z]{1}[0-9]{9}$)|(^[0-9]{9,10}$)/,                                                                     # Format: 1Alpha+9Numeric or 9Numeric or 10Numeric
-        'IA' => /(^[0-9]{9}$)|(^[0-9]{3}[A-Z]{2}[0-9]{4})$/,                                                                    # Format: 9Numeric or 3Numeric+2Alpha+4Numeric
+        'IA' => /(^[0-9]{9}$)|(^[0-9]{3}[A-Z]{2}[0-9]{4})$/,                                                                # Format: 9Numeric or 3Numeric+2Alpha+4Numeric
         'KS' => /(^([A-Z]{1}[0-9]{1}){2}[A-Z]{1}$)|(^[A-Z]{1}[0-9]{8}$)|(^[0-9]{9}$)/,                                      # Format: 1Alpha+1Numeric+1Alpha+1Numeric+1Alpha or 1Alpha+8Numeric or 9Numeric
         'KY' => /(^[A-Z]{1}[0-9]{8,9}$)|(^[0-9]{9}$)/,                                                                      # Format: 1Alpha+8Numeric or 1Alpha+9Numeric or 9Numeric
         'LA' => /^[0-9]{1,9}$/,                                                                                             # Format: 1-9Numeric
@@ -85,7 +85,7 @@ module DlValidator
         'MS' => /^[0-9]{9}$/,                                                                                               # Format: 9Numeric
         'MO' => /(^[A-Z]{1}[0-9]{5,9}$)|(^[A-Z]{1}[0-9]{6}[R]{1}$)|(^[0-9]{8}[A-Z]{2}$)|(^[0-9]{9}[A-Z]{1}$)|(^[0-9]{9}$)/, # Format: 1Alpha+5-9Numeric or 1Alpha+6Numeric+R or 8Numeric+2Alpha or 9Numeric+1Alpha or 9Numeric
         'MT' => /(^[A-Z]{1}[0-9]{8}$)|(^[0-9]{13}$)|(^[0-9]{9}$)|(^[0-9]{14}$)/,                                            # Format: 1Alpha+8Numeric or 13Numeric or 9Numeric or 14Numeric
-        'NE' => /^[A-Z]{1}[0-9]{6,8}$/,                                                                                             # Format: 1Alpha+6-8Numeric
+        'NE' => /^[A-Z]{1}[0-9]{6,8}$/,                                                                                     # Format: 1Alpha+6-8Numeric
         'NV' => /(^[0-9]{9,10}$)|(^[0-9]{12}$)|(^[X]{1}[0-9]{8}$)/,                                                         # Format: 9Numeric or 10Numeric or 12Numeric or X+8Numeric
         'NH' => /^[0-9]{2}[A-Z]{3}[0-9]{5}$/,                                                                               # Format: 2Numeric+3Alpha+5Numeric
         'NJ' => /^[A-Z]{1}[0-9]{14}$/,                                                                                      # Format: 1Alpha+14Numeric
